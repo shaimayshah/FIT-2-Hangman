@@ -1,0 +1,68 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-size: 8vh;
+    margin-top: 10px;
+}
+
+div.text-center {
+    color: rgb(107, 117, 126);
+    margin-bottom: -30px;
+}
+
+.mybutton {
+    background-color: black;
+
+}
+
+#hangmanPic {
+    margin-top: 30px;
+}
+
+#wordSpotlight {
+    color:white;
+    font-size: 3vh;
+}
+
+.mybutton:nth-child(3n) {
+    border-color: rgb(255, 7, 58);
+    background-color: rgba(255, 7, 58, 0.5);
+}
+
+.mybutton:nth-child(3n+1) {
+    border-color: rgb(45, 176, 246);
+    background-color: rgba(45, 176, 246, 0.5);
+}
+
+.mybutton:nth-child(3n+2) {
+    border-color: rgb(0,176,72);
+    background-color: rgba(0,176,72, 0.5)
+}
+
+@media (max-width: 770px) {
+
+    h1 {
+        font-size: 2em;
+        margin-top: 10px;
+        margin-bottom: 2vh;
+    }
+    div.text-center {
+        margin-bottom: -30px;
+    }
+}
+
+.reset {
+    margin-top: 1vh;
+}
+
+
+.cap {
+    margin-top: 20px;
+}
+
+.mybutton:disabled {
+    background-color: black;
+}
