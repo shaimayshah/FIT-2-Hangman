@@ -34,7 +34,7 @@ var words = [
     "Recovered", 
     "Outbreak", 
     "Screening", 
-    "Zoonotic", 
+    "Zoonosis", 
     "Flatten", 
     "Curve"
 ];
