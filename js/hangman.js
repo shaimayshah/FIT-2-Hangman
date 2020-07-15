@@ -137,6 +137,13 @@ function handleGuess(letter) {
     }
 }
 
+function handleKeyDown(event){
+    var letter = event.key;
+    console.log(letter);
+    handleGuess(letter);
+
+}
+
 function updatePicture() {
     document.getElementById('hangmanPic').src = './images/'+mistakes+'.jpg';
 }
@@ -177,6 +184,7 @@ function reset() {
     generateButtons();
 }
 
+document.addEventListener('keydown', handleKeyDown);
 randomWord(words);
 generateButtons();
 getWord();
