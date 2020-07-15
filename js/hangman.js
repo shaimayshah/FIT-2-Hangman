@@ -137,8 +137,13 @@ function handleGuess(letter) {
 
 function handleKeyDown(event){
     var letter = event.key;
-    console.log(letter);
-    handleGuess(letter);
+    if(letter === "Enter"){
+        reset();
+    } else {
+        console.log(letter);
+        handleGuess(letter);
+    }
+    
 
 }
 
