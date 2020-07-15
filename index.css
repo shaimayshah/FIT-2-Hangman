@@ -10,7 +10,7 @@ h1 {
 
 div.text-center {
     color: rgb(107, 117, 126);
-    margin-bottom: -30px;
+    /* margin-bottom: -30px; */
 }
 
 .mybutton {
@@ -63,9 +63,6 @@ div.text-center {
         font-size: 2em;
         margin-top: 10px;
         margin-bottom: 2vh;
-    }
-    div.text-center {
-        margin-bottom: -30px;
     }
 }
 
