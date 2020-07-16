@@ -79,10 +79,6 @@ var words_dict = {"Asymptomatic":"(of a condition or a person) producing or show
             "Curve":"Flatten the _____."}
             
 
-// for (var key in words){
-//     var value = words[key];
-//     alert(key+value);
-// }
 
 let answer = '';
 let description = '';
@@ -90,6 +86,7 @@ let maxWrong = 6;
 let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
+
 document.getElementById("maxwrong").innerHTML = maxWrong;
 
 function randomWord() {
@@ -97,10 +94,6 @@ function randomWord() {
     description = words_dict[answer];
     answer = answer.toLowerCase();
 }
-
-// function randomWord(){
-//     answer = words[Math.floor(Math.random() * words.length)].toLowerCase();
-// }
 
 function generateButtons(){
     var but = "";
@@ -124,7 +117,7 @@ function handleGuess(letter) {
     }
     document.getElementById(letter).setAttribute('disabled', true);
     if (answer.indexOf(letter) >= 0) {
-        getWord();
+        renderWord();
         gameWon();
     }
     else if (answer.indexOf(letter) === -1) {
@@ -168,12 +161,12 @@ function updateMistakes() {
     document.getElementById("mistakes").innerHTML = mistakes;
 }
 
-function getWord() {
+function renderWord() {
     document.getElementById("description").innerHTML = description;
     wordStatus = answer.split('').map(letter => 
         (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
 
-        document.getElementById('wordSpotlight').innerHTML = wordStatus;
+    document.getElementById('wordSpotlight').innerHTML = wordStatus;
 }
 
 function reset() {
@@ -182,7 +175,7 @@ function reset() {
     document.getElementById('hangmanPic').src = "./images/0.jpg"
 
     randomWord(words);
-    getWord();
+    renderWord();
     updateMistakes();
     generateButtons();
 }
@@ -190,4 +183,4 @@ function reset() {
 document.addEventListener('keydown', handleKeyDown);
 randomWord(words);
 generateButtons();
-getWord();
+renderWord();
