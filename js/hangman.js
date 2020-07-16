@@ -107,15 +107,13 @@ function generateButtons(){
                      ` + alphabets[i] + `
                    </button>`;
     }
-
     document.getElementById('keyboard').innerHTML = but;
 }
 
 function handleGuess(letter) {
     if(guessed.indexOf(letter) === -1){
         guessed.push(letter);
-    }
-    document.getElementById(letter).setAttribute('disabled', true);
+        document.getElementById(letter).setAttribute('disabled', true);
     if (answer.indexOf(letter) >= 0) {
         renderWord();
         gameWon();
@@ -125,6 +123,7 @@ function handleGuess(letter) {
         updateMistakes();
         gameLost();
         updatePicture();
+    }
     }
 }
 
